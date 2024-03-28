@@ -1,1 +1,1 @@
-This is for the Tango With Django 2 Textbook
+This is for the Tango With Django 2 Textbook.
