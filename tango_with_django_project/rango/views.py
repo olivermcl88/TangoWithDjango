@@ -68,7 +68,7 @@ def add_category(request):
             form.save(commit=True)
             # Now that the category is saved, we could confirm this.
             # For now, just redirect the user back to the index view.
-            return redirect('/rango/')
+            return redirect(reverse('rango:index'))
         else:
             print(form.errors)
 # Will handle the bad form, new form, or no form supplied cases.
@@ -80,7 +80,7 @@ def add_page(request, category_name_slug):
         category = Category.objects.get(slug=category_name_slug)
     except:
         category = None
-        return redirect('/rango/')    
+        return redirect(reverse('rango:index'))  
 
     form = PageForm()
 
